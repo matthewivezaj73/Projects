@@ -1,0 +1,12 @@
+---
+- name: Create devops user
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: Create devops user
+      user:
+        name: devops
+        shell: /bin/bash
+        groups: sudo
+        append: yes
