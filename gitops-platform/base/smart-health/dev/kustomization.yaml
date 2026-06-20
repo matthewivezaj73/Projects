@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# Base resources
+resources:
+  - ../../../base/smart-geo
+
+# Namespace for this environment
+namespace: dev
+
+# Patches to modify base resources for dev
+patchesStrategicMerge:
+  # Adjust number of replicas for dev
+  - replica-patch.yaml
+  # Optional: set environment-specific config (like image tag or env vars)
+  - configmap-patch.yaml

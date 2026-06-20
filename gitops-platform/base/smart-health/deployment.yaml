@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smart-health
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: smart-health
+  template:
+    metadata:
+      labels:
+        app: smart-health
+    spec:
+      containers:
+      - name: smart-health
+        image: nginx
+        ports:
+        - containerPort: 80
