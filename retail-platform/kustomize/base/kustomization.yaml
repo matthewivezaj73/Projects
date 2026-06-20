@@ -1,0 +1,17 @@
+spec:
+  containers:
+    - name: retail-backend
+      image: retail-backend:1.0
+
+      env:
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: username
+
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: password
