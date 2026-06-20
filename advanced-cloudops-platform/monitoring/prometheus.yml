@@ -1,0 +1,44 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+# Rules file (used for alerts in Step 3)
+rule_files:
+  - "alert.rules.yml"
+
+scrape_configs:
+
+  # -------------------------
+  # Prometheus itself
+  # -------------------------
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  # -------------------------
+  # Node / container metrics (cAdvisor)
+  # -------------------------
+  - job_name: "cadvisor"
+    static_configs:
+      - targets: ["cadvisor:8080"]
+
+  # -------------------------
+  # Flask App (your cloudops-app)
+  # -------------------------
+  - job_name: "cloudops-app"
+    static_configs:
+      - targets: ["app:5000"]
+
+  # -------------------------
+  # Loki (logging backend)
+  # -------------------------
+  - job_name: "loki"
+    static_configs:
+      - targets: ["loki:3100"]
+
+  # -------------------------
+  # OPTIONAL: Kubernetes (ONLY used after migration)
+  # -------------------------
+  # - job_name: 'kubernetes'
+  #   kubernetes_sd_configs:
+  #     - role: pod

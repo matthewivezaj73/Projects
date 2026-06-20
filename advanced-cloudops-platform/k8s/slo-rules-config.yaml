@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: slo-rules-config
+data:
+  slo-rules.yaml: |
+    groups:
+      - name: slo_rules
+        rules:
+
+          - record: job:http_error_rate
+            expr: |
+              sum(rate(app_requests_total{http_status="500"}[1m]))
+              /
+              sum(rate(app_requests_total[1m]))
+
+          - record: job:request_latency_p95
+            expr: |
+              histogram_quantile(
+                0.95,
+                rate(app_request_latency_seconds_bucket[1m])
+              )

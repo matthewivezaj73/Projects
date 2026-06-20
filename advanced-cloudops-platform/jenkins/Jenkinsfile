@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'docker build -t cloudops-app ../app'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'echo "Running tests..."'
+            }
+        }
+	stage('Security Scan') {
+   	     steps {
+        	sh 'trivy image cloudops-app'
+   	    }
+	}
+        stage('Deploy') {
+            steps {
+                sh 'kubectl apply -f ../kubernetes/app'
+            }
+        }
+    }
+}
