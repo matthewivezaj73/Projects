@@ -1,10 +1,10 @@
 # Projects
 
-🚀 Cloud, DevOps & AI Engineering Portfolio
+Cloud, DevOps & AI Engineering Portfolio
 
 This repo contains a set of cloud, DevOps, and AI-focused projects built to simulate real production-style systems. The focus is on infrastructure design, automation, deployment workflows, and integrating AI into backend systems using modern cloud engineering practices.
 
-🧠 Focus Areas
+Focus Areas
 Cloud infrastructure (AWS, Azure)
 Infrastructure as Code (Terraform, Ansible)
 Containers and orchestration (Docker, Kubernetes)
@@ -12,7 +12,7 @@ CI/CD pipelines (Jenkins, GitHub Actions)
 GitOps-style deployments
 Observability (Prometheus, Grafana, Loki)
 AI systems (RAG pipelines, embeddings, LLM integration)
-📦 Projects
+Projects
 ☁️ advanced-cloudops-platform
 
 Cloud operations platform built to simulate a production monitoring and deployment environment.
@@ -34,7 +34,7 @@ Automated Linux provisioning
 Nginx deployment setup
 User and system configuration management
 Inventory-based execution
-🔁 gitops-platform
+gitops-platform
 
 GitOps-style deployment structure for multi-environment Kubernetes workflows.
 
@@ -44,7 +44,8 @@ Dev / staging / prod configurations
 Kubernetes manifests
 Declarative deployment approach
 Environment-based rollout structure
-🧠 rag-ai-document-system
+
+rag-ai-document-system
 
 AI document retrieval system built around a RAG architecture.
 
@@ -64,7 +65,8 @@ Backend API structure
 Dockerized services
 Cloud deployment simulation
 Sample data workflows
-🛍 retail-platform
+
+retail-platform
 
 Retail-style backend platform built to simulate scalable cloud architecture.
 
@@ -74,7 +76,8 @@ Service-based backend structure
 Containerized deployment
 Event-driven design concepts
 Cloud-ready architecture layout
-🧰 Tech Stack
+
+Tech Stack
 
 AWS, Azure
 Terraform, Ansible
@@ -85,7 +88,7 @@ Python, FastAPI
 RAG pipelines, embeddings, LLM integration
 Linux, Git, Bash
 
-🎯 Purpose
+Purpose
 
 These projects were built to demonstrate practical cloud and platform engineering skills, including:
 
@@ -95,6 +98,6 @@ Building CI/CD pipelines
 Working with Kubernetes-based systems
 Integrating AI systems into backend architectures
 Simulating production engineering environments
-📌 Notes
+Notes
 
 Each project is structured to reflect real-world engineering patterns used in cloud engineering, DevOps, and AI platform engineering teams.
